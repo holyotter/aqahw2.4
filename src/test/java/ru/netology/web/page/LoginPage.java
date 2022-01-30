@@ -1,5 +1,6 @@
 package ru.netology.web.page;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
 import ru.netology.web.data.DataHelper;
 
@@ -12,6 +13,7 @@ public class LoginPage {
     private SelenideElement loginButton = $("[data-test-id=action-login]");
 
     public LoginPage() {
+        Configuration.holdBrowserOpen = true;
         open("http://localhost:9999");
     }
 
